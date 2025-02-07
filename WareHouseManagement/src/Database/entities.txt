@@ -1,0 +1,4 @@
+HP13,HP Laptop,30,A.12.1
+ZEB38,Zebronics Keyboard,46,B.20.34
+DLL23,Dell Laptop,12,A.10.2
+ES12,EvoFox Gaming Mouse,16,C.12.20
