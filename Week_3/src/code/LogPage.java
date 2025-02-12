@@ -5,7 +5,9 @@ import java.util.Scanner;
 
 public class LogPage {
 	public JDBC jdbc;
-	public void signIn() throws SQLException{
+	Admin ad;
+	Accountant ac;
+	public void signIn() throws SQLException,ClassNotFoundException{
 		Scanner sc=new Scanner(System.in);
 		while(true) {
 			System.out.println("Sign In");
@@ -13,42 +15,45 @@ public class LogPage {
 			int choice=sc.nextInt();
 			switch(choice) {
 			case 1:{
-				if(jdbc==null) 
-					jdbc=new JDBC();
+				
+				jdbc=new JDBC();
 				System.out.print("Enter Username: ");
 				String username=sc.next().trim();
 				System.out.print("Enter password: ");
-				String password=sc.next();
+				String password=sc.next().trim();
 				try {
-					Admin a=(Admin)jdbc.checkUser("admin",username,password);
-					if(a==null) throw new InvalidCredentialError();
-				} catch (Exception e) {
-					System.err.println("Invalid credential");
+					ad=(Admin)jdbc.checkUser("admin",username,password);
+					
+				} catch (InvalidCredentialError e) {
+					System.err.println("Invalid credential: Please try again");
+					break;
 				}
-				
+				ad.AdminPage();
 				break;
 			}
 			case 2:{
-				if(jdbc==null)
-					jdbc=new JDBC();
+				
+				jdbc=new JDBC();
 				System.out.print("Enter Username: ");
 				String username=sc.next().trim();
 				System.out.print("Enter password: ");
-				String password=sc.next();
+				String password=sc.next().trim();
 				try {
-					Accountant a=(Accountant)jdbc.checkUser("accountant",username,password);
-					if(a==null) throw new InvalidCredentialError();
-				} catch (Exception e) {
-					System.err.println("invalid credentials");
+					ac=(Accountant)jdbc.checkUser("accountant",username,password);
+					
+				} catch (InvalidCredentialError e) {
+					System.err.println("Invalid credential: Please try again");
+					break;
 				}
+				ac.AccountantPage();
 				break;
 			}
 			default:{
-				System.out.println("Invalid input");
+				System.err.println("Invalid input");
 				jdbc.con.close();
 				sc.close();
 				return;
-			}
+				}
 			}
 		}
 	}

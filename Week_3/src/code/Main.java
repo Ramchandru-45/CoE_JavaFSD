@@ -9,7 +9,9 @@ public class Main {
 		try {
 			lp.signIn();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		catch(ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 		System.out.println("Closing");
