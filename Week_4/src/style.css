@@ -84,13 +84,19 @@ header {
     padding-left: 50px;
     padding-bottom: 20px ;
     padding-right: 100px;
-    background-color: black;
+    background: transparent;
+    width: 1000px;
+    height: 600px;
+    border: 2px solid rgb(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(7px);
     display: inline-block;
     transform: scale(0);
 }
 
 .home.active{
     transform: scale(1);
+    transition: .5s;
 }
 
 .home h1{
@@ -120,40 +126,103 @@ header {
 
 .routine {
     position: absolute;
-    margin-top: 0px;
+    margin-top: 80px;
     margin-left: 150px;
     margin-right: 100px;
-    padding-top: 100px;
+    padding-top: 10px;
     padding-left: 50px;
-    padding-bottom: 20px ;
-    padding-right: 100px;
-    background-color: transparent;
+    width: 1200px;
+    height: 800px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: rgb(250, 250, 250, .5);
     display: inline-block;
     transform: scale(0);
 }
 
 .routine.active{
     transform: scale(1);
-
+    transition: transform .5s;
 }
 
 .routine h2{
     position: relative;
     color: deepskyblue;
     font-family: 'Gill Sans';
-    border-color: #fff;
-    border-width: 2px;
-    border-radius: 3px;
-    background-color: beige;
+    padding-bottom: 20px;
 }
 
 .routine .table{
     table-layout: fixed;
-    border: 20px 20px;
+    width: 1100px;
+    height: 200px;
+    border-radius: 10px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+    padding-right: 50px;
+    padding-top: 20px;
 }
 
-.routine .table tr td{
-    justify-content: center;
-    padding: 20px;
+.routine .table label{
+    font-size: 20pxpx;
     color: #fff;
+    display: flexbox;
+    justify-content: center;
+}
+
+.create {
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 300px;
+    margin-right: 100px;
+    padding-top: 10px;
+    padding-left: 50px;
+    width: 800px;
+    height: 600px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: transparent;
+    backdrop-filter: blur(7px);
+    display: inline-block;
+    transform: scale(0);
+}
+
+.create.active{
+    transform: scale(1);
+    transition: transform .5s;
+}
+
+.create h2{
+    position: relative;
+    color: deepskyblue;
+    font-family: 'Gill Sans';
+    padding-bottom: 20px;
+    
+}
+
+.create .form{
+    margin-top: 20px;
+    margin-left: 100px;
+    justify-content: center;
+    display: flexbox;
+    color: #fff;
+}
+
+.create .form input{
+    display: flex;
+    background-color: rgb(255, 255, 255, .5);
+    content: 'enter here';
+    width: 200px;
+    border-bottom: 2px;
+    border-top: none;
+}
+
+.create .form button{
+    background: #fff;
+    width: 40px;
+    height: 20px;
+    backdrop-filter: blur(50px);
+    font-size: 15px;
+    color: black;
 }
