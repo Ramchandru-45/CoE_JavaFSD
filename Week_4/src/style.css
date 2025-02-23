@@ -1,0 +1,159 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body{
+    background-image: url("../Assets/alina-mertes-4-pose-04-physicalstrenght.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Times New Roman';
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-left: 30px;
+}
+
+.navigation{
+    position: relative;
+    left: 0;
+    transform-origin: 200px;
+    
+}
+
+.navigation button{
+    font-size: 17px;
+    border: none;
+    background: none;
+    position: relative;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    justify-content: space-between;
+    display: flexbox;
+    margin-right: 20px;
+}
+
+.navigation button::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    bottom: -6px;
+    transform: scale(0);
+    transform-origin: right;
+    transition: transform .5s;
+}
+.navigation button:hover::after{
+    position: absolute;
+    background: orange;
+    transform-origin: left;
+    transform: scale(1);
+    transform-origin: left;
+}
+
+.home{
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 50px;
+    margin-right: 100px;
+    padding-top: 100px;
+    padding-left: 50px;
+    padding-bottom: 20px ;
+    padding-right: 100px;
+    background-color: black;
+    display: inline-block;
+    transform: scale(0);
+}
+
+.home.active{
+    transform: scale(1);
+}
+
+.home h1{
+    color: #fff;
+    font-size: 40px;
+}
+
+.home p{
+    color: #fff;
+    font-size: 20px;
+    font-family: Arial;
+}
+
+.home h2{
+    padding-top: 50px;
+    color: #fff;
+    cursor: default;
+}
+
+.home input{
+    text-align: left;
+    
+    border-radius: 20px;
+    width: 300px;
+    height: 100px;
+}
+
+.routine {
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 150px;
+    margin-right: 100px;
+    padding-top: 100px;
+    padding-left: 50px;
+    padding-bottom: 20px ;
+    padding-right: 100px;
+    background-color: transparent;
+    display: inline-block;
+    transform: scale(0);
+}
+
+.routine.active{
+    transform: scale(1);
+
+}
+
+.routine h2{
+    position: relative;
+    color: deepskyblue;
+    font-family: 'Gill Sans';
+    border-color: #fff;
+    border-width: 2px;
+    border-radius: 3px;
+    background-color: beige;
+}
+
+.routine .table{
+    table-layout: fixed;
+    border: 20px 20px;
+}
+
+.routine .table tr td{
+    justify-content: center;
+    padding: 20px;
+    color: #fff;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="./script.js"></script>
+    </head>
+    <body onload="homePage()">
+        <header>
+            <h1 class="logo">Fitness Planner</h1>
+            <nav class="navigation">
+                <button id="h" onclick="homePage()">HOME</button>
+                <button onclick="routinePage()">ROUTINE</button>
+                <button onclick="trackPage()">TRACK</button>
+                <button onclick="createPage()">CREATE</button>
+            </nav>
+        </header>
+        <div class="home">
+            <h1>About us</h1><br>
+            <p>This is a daily body fitness routine maker and planner <span> keep you updated at every moment that </span>you really need it<br>
+                Be it any direction and conventional it needs to be we fit you in every way<br>
+                So, Join us now and make your life better and disiplined
+            </p>
+            <h2>Write to us</h2>
+            <form>
+                <input type="text" name="feedback" placeholder="Enter your Queries here" >
+            </form>
+        </div>
+        <div class="routine">
+            <h2>My Routine</h2>
+            <table class="table">
+                <tr>
+                    <thead>Excersise</thead>
+                    <thead>Timing</thead>
+                    <thead>Target</thead>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
