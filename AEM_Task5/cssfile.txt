@@ -1,0 +1,22 @@
+.Book__container{
+	display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.book__border{
+	display:flex;
+    flex-direction: column;
+    background-color:grey;
+    border-radius: 20px;
+    width: 25%;
+    height: 400px;
+    padding: 20px;
+}
+.book__title{
+	color:blue;
+    text-align: center;
+}
+.book__description{
+	color:black;
+}

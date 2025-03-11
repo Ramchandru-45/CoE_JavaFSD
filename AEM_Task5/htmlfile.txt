@@ -1,0 +1,13 @@
+
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.all @ categories='myTraining.Books', async=true}"/>
+</sly>
+<div class="Book__container" data-sly-use.model="com.myTraining.core.models.BooksModel">
+    <sly data-sly-list.booklist="${model.bookArray}">
+    	<div class="book__border">
+        <h3 class="book__title">${booklist.title}</h3></br>
+        <p class="book__description">${booklist.description}</p>
+        </div>
+    </sly>
+    
+</div>
