@@ -1,0 +1,25 @@
+Steps:
+1.Created a custom template for pages.
+2.Created a experience fragment to apply header and footer.
+3.Provided custom styling on components for better experience.
+
+4.In home page add the author award ceremony picture and text using a teaser component.
+5.added a award section where the award that author received will be displayed.
+6.Text component where a wonderful quote of the author is mentioned.
+
+7.In about me page used a cutomized teaser component with the section of ,author ,his early life, and career life.
+8.provided link in the text-level so readers can reference the linked pages.
+
+9.In Contact me page the social media links are provided and image components also included in footer section.
+10.Copyright and list of books the author wrote are mentioned in list component and link to the page also attached.
+11.Used a navigation in the top of header for page navigation.
+12.Hover effect included for great experience.
+13.Search component included to search for books using title or tags.
+
+Components:
+
+1.Title - Customizable for the page.
+2.Text - To add text and link pages via hyperlink.
+3.Teaser - Customizable teaser component for position and styling of media.
+5.seperator - To create a section in everypage.
+6.Experience fragment - Header and Footer are included as experience fragment.
